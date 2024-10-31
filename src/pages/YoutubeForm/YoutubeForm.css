@@ -1,0 +1,98 @@
+.register-form {
+  max-width: 400px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #121212;
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+  font-family: Arial, sans-serif;
+  color: #e0e0e0;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-form::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff6600,
+    #ffcc00,
+    #00ffcc,
+    #00aaff,
+    #ff00ff
+  );
+  animation: rotateBackground 8s linear infinite;
+  filter: blur(20px);
+  z-index: 0;
+}
+
+@keyframes rotateBackground {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.register-form h1 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+  position: relative;
+}
+
+.register-form .MuiTextField-root {
+  width: 100%;
+  margin-bottom: 1rem;
+  z-index: 1;
+  position: relative;
+}
+
+.register-form .MuiTextField-root .MuiInputBase-root {
+  background-color: #333;
+  border-radius: 6px;
+  color: #e0e0e0;
+}
+
+.register-form .submit-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 16px;
+  font-weight: bold;
+  color: #121212;
+  background-color: #ff3366;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.register-form .submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 10px rgba(255, 51, 102, 0.6);
+}
+
+.register-form .MuiTextField-root .MuiInputLabel-root {
+  color: #888;
+}
+
+.register-form .MuiTextField-root .MuiInputLabel-root.Mui-focused {
+  color: #ff3366;
+}
+
+.register-form .MuiTextField-root .MuiInputBase-root::after {
+  border-bottom: 2px solid #ff3366;
+}
